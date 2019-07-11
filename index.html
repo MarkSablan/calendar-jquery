@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calendar(JQuery)</title>
+	<link rel="stylesheet" href="calendar-style.css">
+	<link rel="stylesheet" href="../lib/font-awesome/css/all.css">
+
+	<script src="../lib/jquery.js"></script>
+	<script src="jquery.js"></script>
+	<script src="calendar.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="calendar">
+			<div class="calendar-footer">
+				<div class="next-prev">
+					<div class="btn prev-btn">prev</div>
+					<div class="btn next-btn">next</div>
+				</div>
+				<div class="options">
+					<div class="btn jump-today"><i class="far fa-dot-circle fa-sm"></i></div>
+					<div class="btn cancel-btn">Cancel</div>
+					<div class="btn ok-btn">Ok</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<script>
+		let c = $('.calendar');
+		let calendar = new Calendar(c);
+		// console.log(calendar.getSelectedDate().day);
+		// console.log(c.find(0));
+		c.find('.ok-btn').on('click', function() {console.log(calendar.getSelectedDate().fullDate)});
+	</script>
+	
+</body>
+</html>
